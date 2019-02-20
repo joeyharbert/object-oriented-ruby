@@ -9,10 +9,10 @@
 class Item
   attr_reader :model, :color
   attr_accessor :price
-  def initialize(model, color, price)
-    @model = model
-    @color = color
-    @price = price
+  def initialize(input)
+    @model = input[:model]
+    @color = input[:color]
+    @price = input[:price]
   end
 
   def friendly_price
@@ -21,7 +21,7 @@ class Item
 
 end
 
-phone = Item.new("iPhone XR", "space grey", 800)
+phone = Item.new(model: "iPhone XR", color: "space grey", price: 800)
 
 puts "Phone model: #{phone.model}"
 puts "Phone color: #{phone.color}"
