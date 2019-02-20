@@ -7,8 +7,8 @@
 # p "Phone price: #{phone[:price]}"
 
 class Item
-  attr_reader :model, :color, :price
-  attr_writer :price
+  attr_reader :model, :color
+  attr_accessor :price
   def initialize(model, color, price)
     @model = model
     @color = color
