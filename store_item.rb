@@ -7,35 +7,18 @@
 # p "Phone price: #{phone[:price]}"
 
 class Item
+  attr_reader :model, :color, :price
+  attr_writer :price
   def initialize(model, color, price)
     @model = model
     @color = color
     @price = price
   end
 
-#getter
-  def model
-    @model
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-#/getter
-
   def friendly_price
     return "$#{@price}.00"
   end
 
-#setter
-  def price=(price)
-    @price = price
-  end
-#/setter
 end
 
 phone = Item.new("iPhone XR", "space grey", 800)
