@@ -1,5 +1,4 @@
 class Car
-  attr_reader :speed, :direction
   def initialize
     @speed = 0
     @direction = 'north'
@@ -28,20 +27,22 @@ class Bike < Car
   end
 end
 
+#driver code
 bike = Bike.new()
 bike.ring_bell
 bike.turn("east")
-p bike.direction
+p bike
 bike.accelerate
-p bike.speed
+p bike
 bike.brake
-p bike.speed
+p bike
 
 car = Car.new()
 car.honk_horn
 car.turn("west")
-p car.direction
+p car
 car.accelerate
-p car.speed
+p car
 car.brake
-p car.speed
+p car
+# / driver code
