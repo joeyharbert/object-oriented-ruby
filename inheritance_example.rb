@@ -34,6 +34,14 @@ bike.turn("east")
 p bike.direction
 bike.accelerate
 p bike.speed
+bike.brake
+p bike.speed
 
 car = Car.new()
 car.honk_horn
+car.turn("west")
+p car.direction
+car.accelerate
+p car.speed
+car.brake
+p car.speed
