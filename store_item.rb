@@ -38,4 +38,7 @@ phone = Item.new("iPhone XR", "space grey", 800)
 
 puts "Phone model: #{phone.model}"
 puts "Phone color: #{phone.color}"
-puts "Phone price: #{phone.price}"
+puts "Phone price: $#{phone.price}"
+phone.price = 999999
+puts "Oh no! The price has gone up!"
+puts "Phone price: $#{phone.price}"
