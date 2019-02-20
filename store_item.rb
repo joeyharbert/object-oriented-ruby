@@ -27,6 +27,10 @@ class Item
   end
 #/getter
 
+  def friendly_price
+    return "$#{@price}.00"
+  end
+
 #setter
   def price=(price)
     @price = price
@@ -38,7 +42,7 @@ phone = Item.new("iPhone XR", "space grey", 800)
 
 puts "Phone model: #{phone.model}"
 puts "Phone color: #{phone.color}"
-puts "Phone price: $#{phone.price}"
+puts "Phone price: #{phone.friendly_price}"
 phone.price = 999999
 puts "Oh no! The price has gone up!"
-puts "Phone price: $#{phone.price}"
+puts "Phone price: #{phone.friendly_price}"
