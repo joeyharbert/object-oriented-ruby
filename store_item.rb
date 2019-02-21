@@ -18,7 +18,6 @@ class Item
   def friendly_price
     return "$#{@price}.00"
   end
-
 end
 
 phone = Item.new(model: "iPhone XR", color: "space grey", price: 800)
