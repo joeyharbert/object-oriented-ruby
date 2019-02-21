@@ -29,3 +29,11 @@ puts "Phone price: #{phone.friendly_price}"
 phone.price = 999999
 puts "Oh no! The price has gone up!"
 puts "Phone price: #{phone.friendly_price}"
+
+class Food < Item
+  def initialize(input)
+    super
+    @shelf_life = input[:shelf_life]
+  end
+end
+
