@@ -16,6 +16,10 @@ class Employee
   def give_annual_raise
     @salary = 1.05 * @salary
   end
+
+  def deal_with_customer
+    p "Let me get my manager to help you."
+  end
 end
 
  employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
@@ -47,6 +51,10 @@ class Manager < Employee
       employee.active = false
     end
   end
+
+  def deal_with_customer
+    p "Get out. I'm the manager, I make the rules."
+  end
 end
 
  manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -69,5 +77,6 @@ manager.employees.length.times do
   i += 1
 end
 
-
+manager.deal_with_customer
+manager.employees[0].deal_with_customer
 #/driver code
