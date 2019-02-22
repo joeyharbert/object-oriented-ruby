@@ -5,7 +5,7 @@
 # p "Phone model: #{phone[:model]}"
 # p "Phone color: #{phone[:color]}"
 # p "Phone price: #{phone[:price]}"
-module Joey
+module StoreFront
   class Item
     attr_reader :model, :color
     attr_accessor :price
